@@ -1,0 +1,21 @@
+Config:
+# Download and install fnm: 
+winget install Schniz.fnm 
+# Download and install Node.js: 
+fnm install 22 
+# Verify the Node.js version: 
+node -v 
+# Should print "v22.14.0". 
+# Verify npm version: 
+npm -v 
+# Should print "10.9.2". this isnt working node -v return error not finding node
+fnm use 22
+fnm env --use-on-cd --shell powershell | Out-String | Invoke-Expression
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+
+git config --global user.name "Bruno"
+git config --global user.email "contato_bruno@outlook.com"
+git remote add origin https://github.com/bruno-oliveira1/atividade-nodejs.git
+git commit -m "Atividade Node.js - Consulta previsão do tempo"
+git remote add origin https://github.com/bruno-oliveira1/atividade-nodejs.git
+git push -u origin main
